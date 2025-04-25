@@ -51,6 +51,11 @@ require("lazy").setup({
     },
 
 -- null-ls for formating
+  {
+    'nvimtools/none-ls.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+
 
 -- Theme
 -- { 'joshdick/onedark.vim' },
