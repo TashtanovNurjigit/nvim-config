@@ -3,7 +3,6 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- Sntup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {
-  cmd = { "/snap/bin/pyright-langserver", "--stdio" },
   capabilities = capabilities,
 }
 lspconfig.ts_ls.setup {}
@@ -59,3 +58,24 @@ vim.api.nvim_create_autocmd('LspAttach', {
                        function() vim.lsp.buf.format {async = true} end, opts)
     end
 })
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
+})
+

@@ -49,4 +49,5 @@ vim.opt.fillchars = {
     foldsep = "│",
     foldclose = "▸"
 }
+vim.opt.textwidth = 80       -- Максимальная ширина строки
 

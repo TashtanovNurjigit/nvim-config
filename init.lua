@@ -1,10 +1,19 @@
+vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+  pattern = "*",
+  callback = function()
+    if vim.bo.modified and vim.bo.filetype ~= "" then
+      vim.cmd("silent! write")
+    end
+  end,
+})
+
 -- Basic
 require('core.plugins')
 require('core.mappings')
 require('core.colors')
 require('core.configs')
 
--- Plugins
+--Plugins 
 require('plugins.neotree')
 require('plugins.treesitter')
 require('plugins.lsp')

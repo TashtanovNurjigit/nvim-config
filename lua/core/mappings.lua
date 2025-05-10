@@ -6,11 +6,13 @@ vim.keymap.set('n', '<leader>E', ':Neotree left reveal<CR>')
 vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>') 
 
 -- Navigation
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>')
+-- в init.lua или в отдельном файле конфигурации
+vim.keymap.set('n', '<C-j>', '8j', { noremap = true })
+vim.keymap.set('n', '<C-k>', '8k', { noremap = true })
+
 
 -- Splits
 vim.keymap.set('n', '|', ':vsplit<CR>')
