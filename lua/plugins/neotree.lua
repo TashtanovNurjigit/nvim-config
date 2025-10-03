@@ -22,4 +22,9 @@ vim.fn.sign_define("DiagnosticSignHint",
 
 require("neo-tree").setup({
 	enable_git_status = true,
+    popup_border_style = "rounded",
+    window = {
+        position = "left",
+        width = 30,
+    },
 })

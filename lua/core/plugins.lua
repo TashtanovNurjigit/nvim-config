@@ -57,8 +57,8 @@ require("lazy").setup({
   },
 
 
--- Theme
--- { 'joshdick/onedark.vim' },
+--Theme
+{ 'joshdick/onedark.vim' },
 {
   "loctvl842/monokai-pro.nvim",
   config = function()
@@ -67,7 +67,7 @@ require("lazy").setup({
   end,
 },
 
--- others
+-- Others
 {
   -- amongst your other plugins
   {'akinsho/toggleterm.nvim', version = "*", config = true},
