@@ -84,6 +84,7 @@ require("lazy").setup({
     config = true
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
-}
+},
+{"christoomey/vim-tmux-navigator"}
 
 })

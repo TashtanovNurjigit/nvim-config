@@ -25,8 +25,11 @@ vim.keymap.set('n', '<leader>f', ':Neotree float reveal<CR>')
 vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>') 
 
 -- Navigation
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+-- Навигация между окнами с Ctrl + hjkl
+-- vim.keymap.set('n', '<C-h>', '<C-w>h', { silent = true })
+-- vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
+-- vim.keymap.set('n', '<C-k>', '<C-w>k', { silent = true })
+-- vim.keymap.set('n', '<C-l>', '<C-w>l', { silent = true })
 vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>')
 -- в init.lua или в отдельном файле конфигурации
 vim.keymap.set('n', '<A-j>', '8j', { noremap = true })
@@ -52,3 +55,4 @@ vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
 vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>')
 vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
+
