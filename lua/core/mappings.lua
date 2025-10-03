@@ -29,9 +29,8 @@ vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>')
 -- в init.lua или в отдельном файле конфигурации
-vim.keymap.set('n', '<C-j>', '8j', { noremap = true })
-vim.keymap.set('n', '<C-k>', '8k', { noremap = true })
-
+vim.keymap.set('n', '<A-j>', '8j', { noremap = true })
+vim.keymap.set('n', '<A-k>', '8k', { noremap = true })
 
 -- Splits
 vim.keymap.set('n', '|', ':vsplit<CR>')
