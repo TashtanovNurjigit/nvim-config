@@ -1,4 +1,5 @@
 local colors = {
+    orange = "#AF5F00",  
     blue = '#80a0ff',
     cyan = '#79dac8',
     black = '#080808',
@@ -10,7 +11,7 @@ local colors = {
 
 local bubbles_theme = {
     normal = {
-        a = {fg = colors.black, bg = colors.violet},
+        a = {fg = colors.black, bg = colors.orange},
         b = {fg = colors.white, bg = colors.grey},
         c = {fg = colors.black, bg = colors.black}
     },
@@ -34,8 +35,8 @@ require('lualine').setup {
     sections = {
         lualine_a = {{'mode', separator = {left = ''}, right_padding = 2}},
          lualine_b = {
-            'filename', 'branch'
-            -- 'require("lsp-progress").progress'  
+            'filename', 'branch',
+            'require("lsp-progress").progress'  
         },
         lualine_c = {'fileformat'},
         lualine_x = {},

@@ -58,15 +58,31 @@ require("lazy").setup({
 
 
 --Theme
-{ 'joshdick/onedark.vim' },
-{
-  "loctvl842/monokai-pro.nvim",
-  config = function()
-    require("monokai-pro").setup({transparent_background = true})
-    vim.cmd("colorscheme monokai-pro-octagon")  -- можно заменить на одну из других тем (ниже)
-  end,
-},
+-- { 'joshdick/onedark.vim' },
+-- {
+--   "loctvl842/monokai-pro.nvim",
+--   config = function()
+--     require("monokai-pro").setup({transparent_background = true})
+--     vim.cmd("colorscheme monokai-pro-octagon")  -- можно заменить на одну из других тем (ниже)
+--   end,
+-- },
 
+{
+  "sainnhe/gruvbox-material",
+  lazy = false,  -- грузим сразу, если нужно сразу применить
+  config = function()
+    require('gruvbox-material').setup({
+      italics = true,
+      contrast = "medium",
+      comments = { italics = true },
+      background = { transparent = true},
+      float = { force_background = false, background_color = nil },
+      signs = { force_background = false, background_color = nil },
+      customize = nil,
+    })
+    vim.cmd([[colorscheme gruvbox-material]])
+  end
+},
 -- Others
 {
   -- amongst your other plugins
